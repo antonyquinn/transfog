@@ -1,0 +1,43 @@
+<dazzle xmlns="http://www.biojava.org/2000/dazzle">
+
+    <!-- Collection of ontology terms. The same resource can be shared by many DSNs, thus minimising memory usage -->
+    <resource id="ontologies" jclass="uk.ac.ebi.dogwood.holder.impl.OntologyMapHolderImpl">
+        <string name="propertiesFile"       value="/ontologies.properties" />
+    </resource>
+
+    <!-- TRANSFOG annotation data source -->
+    <datasource id="transfog-annotation"    jclass="uk.ac.ebi.dogwood.datasource.GFFOntologyAnnotationSource">
+        <string name="name"                 value="Transfog Annotation" />
+        <string name="description"          value="Transfog annotation data source" />
+        <string name="version"              value="1.0" />
+        <!-- Reference server URL -->
+        <string name="mapMaster"            value="http://www.ebi.ac.uk/das-srv/combined/das/ensembl-ipi/" />
+        <!-- Location of GFF file - this can be a relative file reference, an absolutle file reference,
+             or a URL (file://, http://, https:// or ftp://)-->
+        <string name="url"                  value="/transfog.gff" />
+        <!-- User name and password if GFF is password protected -->
+        <!--
+        <string name="userName"             value="user" />
+        <string name="password"             value="pass" />
+        -->
+        <!-- How often in seconds to check the GFF file for updates -->
+        <int    name="refreshInterval"      value="10" />
+        <!-- Maximum number of features to cache in memory -->
+        <int    name="maxCachedFeatures"    value="1000" />
+        <!-- Minimum value for DAS END element - use 0 (zero) to allow non-positional features  -->
+        <int    name="minLocation"          value="0" />
+        <!-- Ontology terms resource -->
+        <string name="ontologyMapHolderID"  value="ontologies" />
+        <!-- Automatically generate DAS LINK elements? (true/false) -->
+        <boolean name="autoLink"            value="true" />
+        <!-- URL to use if autoLink=true (autoLinkString is replaced with the feature ID) -->
+        <string name="autoLinkUrl"          value="http://www.autolink.com/res?id=${id}" />
+        <!-- URL to use if autoLink=true (autoLinkString is replaced with the segment ID) -->
+        <!--string name="autoLinkUrl"          value="http://www.autolink.com/res?id=${segment-id}" /-->
+        <!-- String to replace in autoLinkUrl. Default is ${id}. -->
+        <!--string name="autoLinkString"    value="\$\{id\}" /-->
+        <!-- MIME type of LINK element. Default is text/html. -->
+        <!--string name="linkType"          value="text/html" /-->
+    </datasource>
+
+</dazzle>

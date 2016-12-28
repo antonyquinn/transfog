@@ -1,0 +1,9 @@
+<?xml version='1.0' standalone='no' ?>
+<!DOCTYPE DASTYPES SYSTEM 'dastypes.dtd' >
+<DASTYPES>
+  <GFF version="1.0" href="http://localhost/candidates/types">
+    <SEGMENT version="1.0">
+      <TYPE id="screening" />
+    </SEGMENT>
+  </GFF>
+</DASTYPES>

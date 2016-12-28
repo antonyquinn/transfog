@@ -1,0 +1,22 @@
+##gff-version 2
+##date 2005-03-09
+
+# Minimum information: gene/protein ID, method, feature
+ENSG00000139793	ECO:0000016	GO:0005524	0	0	0	.	.
+# Same as above plus a database identifier (eg. internal LIMS system identifier)
+ENSG00000139793	ECO:0000016	GO:0005524	0	0	0	.	.	id "AG8337"
+# Same as above plus a label describing the ID
+ENSG00000139793	ECO:0000016	GO:0005524	0	0	0	.	.	id "AG8337" ; Name "LIMS identifier"
+# Same as above plus a note
+ENSG00000139793	ECO:0000016	GO:0005524	0	0	0	.	.	id "AG8337" ; Name "LIMS identifier" ; Note "Further information"
+# Same as above plus targets (eg. protein interaction partners)
+ENSG00000139793	ECO:0000016	GO:0005524	0	0	0	.	.	id "AG8337" ; Name "LIMS identifier" ; Note "Further information" ; Target "IPI00029267"
+# Same as above plus web link (this will override any auto-generated links)
+ENSG00000139793	ECO:0000016	GO:0005524	0	0	0	.	.	id "AG8337" ; Name "LIMS identifier" ; Note "Further information" ; Target "IPI00029267" ; Link "http://www.institute.org/myprotein.xls"
+# Same as above plus a MIME type and description of the link
+ENSG00000139793	ECO:0000016	GO:0005524	0	0	0	.	.	id "AG8337" ; Name "LIMS identifier" ; Note "Further information" ; Target "IPI00029267" ; Link "http://www.institute.org/myprotein.xls|Excel spreadsheet of my protein|application/msexcel"
+
+# We can also use ontology identifiers in the id field (the description will be looked up automaticaly)
+IPI00028955	ECO:0000097	GO:0008150	0	0	0	.	.	id "GO:0006915"
+# The field names are not case-sensitive, so the following are all OK (id, Id, ID, TARGET ..etc)
+IPI00028955	MI:0018	GO:0005515	0	0	0	.	.	ID "39" ; TARGET "IPI00295313" "IPI00029267"

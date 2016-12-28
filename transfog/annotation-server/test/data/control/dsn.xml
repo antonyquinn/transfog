@@ -1,0 +1,9 @@
+<?xml version='1.0' standalone='no' ?>
+<!DOCTYPE DASDSN SYSTEM 'dasdsn.dtd' >
+<DASDSN>
+  <DSN>
+    <SOURCE id="transfog-annotation" version="1.0">Transfog Annotation</SOURCE>
+    <MAPMASTER>http://web59-node1.ebi.ac.uk:8020/das-srv/combined/das/ensembl-ipi/</MAPMASTER>
+    <DESCRIPTION>Transfog annotation data source</DESCRIPTION>
+  </DSN>
+</DASDSN>

@@ -1,0 +1,16 @@
+                          TRANSFOG Reference Server
+
+Quick installation
+------------------
+
+1. Download transfog-reference-server-*.tar.gz (eg. transfog-reference-server-1.0.tar.gz)
+2. Unpack to any directory
+3. Copy transfog-reference-server to your Tomcat webapps directory
+4. Restart Tomcat
+5. Browse http://localhost:8080/transfog-reference-server
+6. Try some DAS commands, eg.
+   http://localhost:8080/transfog-reference-server/candidates/entry_points
+   http://localhost:8080/transfog-reference-server/candidates/types
+   http://localhost:8080/transfog-reference-server/candidates/features?segment=IPI00010348
+7. Stop Tomcat
+8. Edit dazzlecfg.xml and transfog-reference.gff as required.

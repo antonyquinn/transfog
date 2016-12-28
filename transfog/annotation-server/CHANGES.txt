@@ -1,0 +1,30 @@
+TRANSFOG ANNOTATION SERVER CHANGELOG
+====================================
+http://sourceforge.net/projects/transfog
+
+
+Changes in version 1.0.2 (2006-05-16)
+------------------------------------
+
+Ant
+* Build classpaths dynamically
+* Added test-dump
+
+lib
+* Moved test JARs to test/lib
+* Updated biojava.jar
+* Updated dazzle.jar
+  - ${segment-id} can now be used in autoLink URLs
+* Updated dogwood.jar
+  - Removed Ontology_id and Dbxref (just use ID instead)
+  - Attributes now not case-sensitive (eg. ID or Id or id)
+
+src
+* Added vba directory
+* Moved to web directory to src
+* Added src/web/transfog-annotation.xls
+* Updated transfog-annotation.gff to reflect new use of type column
+* Corrected display-name and description in web.xml
+* Updated mapMaster in dazzlecfg.xml
+
+$Id: CHANGES.txt,v 1.1 2006/05/16 17:10:03 aquinn Exp $

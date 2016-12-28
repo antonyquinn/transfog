@@ -1,0 +1,45 @@
+TRANSFOG ANNOTATION SERVER INSTALLATION INSTRUCTIONS
+====================================================
+
+Getting Started
+---------------
+1. Download transfog-annotation-server-*.tar.gz (eg. transfog-annotation-server-1.0.tar.gz)
+2. Unpack to any directory
+3. Copy transfog-annotation-server to your Tomcat webapps directory
+4. Restart Tomcat
+5. Browse http://localhost:8080/transfog-annotation-server
+6. Try some DAS commands, eg.
+   http://localhost:8080/transfog-annotation-server/transfog-annotation/types
+   http://localhost:8080/transfog-annotation-server/transfog-annotation/features?segment=ENSG00000139793
+
+If everything looks OK you should:
+1. Stop Tomcat
+2. Open dazzlecfg.xml in a text editor
+3. Change autoLinkUrl to something appropriate for your institution. Examples:
+   <string name="autoLinkUrl" value="http://www.dkfz.de/LIFEdb/CloneInfo.aspx?CloneID=${id}" />
+   <string name="autoLinkUrl" value="mailto:enzo@ircc.it" />
+4. Save dazzlecfg.xml
+5. Start Tomcat
+
+Adding Annotation
+-----------------
+If you have Microsoft Excel you should open transfog-annotation.xls and follow the
+instructions on the Help sheet. When you click the Export button your data will
+be saved to transfog-annotation.gff, and will be visible in DAS within 10 seconds.
+
+If you do not have Microsoft Excel you should edit transfog-annotation.gff using
+a file editor or another spreadsheet application, for example OpenOffice.
+
+Advanced
+--------
+Apart from autoLinkUrl (see above) the default settings in dazzlecfg.xml and
+ontologies.properties should meet your basic requirements. If you need to change
+either of these files you will have to stop Tomcat, edit the files and then restart
+Tomcat.
+
+Help
+----
+Please contact Antony Quinn <aquinn@users.sf.net> if you require assistance.
+
+
+$Id: INSTALL.txt,v 1.1.1.1 2006/05/22 10:33:22 aquinn Exp $

@@ -1,0 +1,163 @@
+<?xml version='1.0' standalone='no' ?>
+<!DOCTYPE DASGFF SYSTEM 'dasgff.dtd' >
+<DASGFF>
+  <GFF version="1.0" href="http://localhost:0/sequences/features?segment=IPI00010348&#38;segment=ENSG00000012048">
+    <SEGMENT id="ENSG00000012048" version="default" start="1" stop="81091">
+      <FEATURE id="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648" label="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="IPI">IPI</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__description_ENSG00000012048_2147483647_-2147483648" label="__dazzle__description_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="description">description</TYPE>
+        <METHOD id="ensembl">ensembl</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648" label="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="IPI">IPI</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648" label="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="IPI">IPI</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648" label="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="IPI">IPI</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648" label="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="IPI">IPI</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648" label="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="IPI">IPI</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648" label="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="IPI">IPI</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648" label="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="Uniprot/SWISSPROT">Uniprot/SWISSPROT</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648" label="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="IPI">IPI</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648" label="__dazzle__dbxref_ENSG00000012048_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="IPI">IPI</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="IPI00010348" version="default" start="1" stop="360">
+      <FEATURE id="__dazzle__description_IPI00010348_2147483647_-2147483648" label="__dazzle__description_IPI00010348_2147483647_-2147483648">
+        <TYPE id="description">description</TYPE>
+        <METHOD id="description">description</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_IPI00010348_2147483647_-2147483648" label="__dazzle__dbxref_IPI00010348_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="TAX-ID">TAX-ID</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_IPI00010348_2147483647_-2147483648" label="__dazzle__dbxref_IPI00010348_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="SWISS-PROT">SWISS-PROT</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_IPI00010348_2147483647_-2147483648" label="__dazzle__dbxref_IPI00010348_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="REFSEQ_NP">REFSEQ_NP</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_IPI00010348_2147483647_-2147483648" label="__dazzle__dbxref_IPI00010348_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="H-Inv">H-Inv</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+      <FEATURE id="__dazzle__dbxref_IPI00010348_2147483647_-2147483648" label="__dazzle__dbxref_IPI00010348_2147483647_-2147483648">
+        <TYPE id="dbxref">dbxref</TYPE>
+        <METHOD id="Ensembl">Ensembl</METHOD>
+        <START>2147483647</START>
+        <END>-2147483648</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+    </SEGMENT>
+  </GFF>
+</DASGFF>

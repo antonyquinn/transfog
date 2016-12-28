@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+
+<!--
+  Copyright 2005 European Bioinformatics Institute.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<project name="TRANSFOG Reference Server" default="dist" basedir=".">
+
+    <property file="build.properties"/>
+
+    <target name="init" description="Make build and distribution directories">
+        <tstamp />
+        <mkdir dir="${build.dir}" />
+        <mkdir dir="${build.classes.dir}" />
+        <mkdir dir="${build.lib.dir}" />
+        <copy todir="${build.lib.dir}">
+            <fileset dir="${lib.dir}">
+                <include name="*.jar" />
+                <exclude name="dazzle-test.jar" />
+                <exclude name="httpunit.jar" />
+                <exclude name="junit.jar" />
+                <exclude name="servlet.jar" />
+                <exclude name="xmlunit1.0.jar" />
+            </fileset>
+        </copy>
+        <mkdir dir="${build.webapp.dir}" />
+        <mkdir dir="${dist.dir}" />
+        <mkdir dir="${pub.dir}" />
+    </target>
+
+    <target name="compile" depends="init" description="Compile source code">
+        <javac srcdir="${src.dir}"
+               destdir="${build.classes.dir}"
+               classpath="${classpath}"/>
+    </target>
+
+    <target name="dist" depends="compile" description="Generate distribution">
+        <jar jarfile="${build.jar}" basedir="${build.classes.dir}"/>
+        <war destfile="${dist.war}" webxml="${web.dir}/WEB-INF/web.xml">
+            <lib dir="${build.lib.dir}"/>
+            <fileset dir="${web.dir}">
+                <exclude name="WEB-INF/web.xml"/>
+            </fileset>
+        </war>
+        <unwar src="${dist.war}" dest="${build.webapp.dir}"/>
+    </target>
+
+    <target name="publish" depends="dist" description="Creates source and binary releases">
+        <!-- WAR -->
+        <tar destfile="${pub.war}" compression="gzip">
+            <tarfileset dir="."
+                        prefix="${pub.prefix.war}">
+                <include name="LICENSE.txt" />
+                <include name="README.txt" />
+                <include name="INSTALL.txt" />
+                <include name="NOTES.txt" />
+            </tarfileset>
+            <tarfileset dir="${dist.dir}"
+                        prefix="${pub.prefix.war}"/>
+        </tar>
+        <!-- Webapp (unpacked WAR) -->
+        <tar destfile="${pub.webapp}" compression="gzip">
+            <tarfileset dir="."
+                        prefix="${pub.prefix.webapp}">
+                <include name="LICENSE.txt" />
+                <include name="README.txt" />
+                <include name="INSTALL.txt" />
+            </tarfileset>
+            <tarfileset dir="${build.webapp.dir}"
+                        prefix="${pub.prefix.webapp}/${name}"
+                        preserveLeadingSlashes="true"/>
+        </tar>
+        <!-- Sources -->
+        <tar destfile="${pub.src}" compression="gzip">
+            <tarfileset dir="."
+                        prefix="${pub.prefix.src}"
+                        preserveLeadingSlashes="true">
+                <include name="*.*" />
+            </tarfileset>
+            <tarfileset dir="${ide.dir}"
+                        prefix="${pub.prefix.src}/${ide.dir}"
+                        preserveLeadingSlashes="true"/>
+            <tarfileset dir="${lib.dir}"
+                        prefix="${pub.prefix.src}/${lib.dir}"
+                        preserveLeadingSlashes="true"/>
+            <tarfileset dir="${test.dir}"
+                        prefix="${pub.prefix.src}/${test.dir}"
+                        preserveLeadingSlashes="true"/>
+            <tarfileset dir="${web.dir}"
+                        prefix="${pub.prefix.src}/${web.dir}"
+                        preserveLeadingSlashes="true"/>
+        </tar>
+    </target>
+
+    <target name="release" depends="publish" description="Uploads the published files to SourceForge">
+        <ftp server="${ftp.server}"
+             remotedir="${ftp.remotedir}"
+             userid="${ftp.userid}"
+             password="${ftp.password}"
+             action="${ftp.action}">
+            <fileset dir="${pub.dir}"/>
+        </ftp>
+    </target>
+
+    <target name="javadocs" depends="init" description="Generate JavaDocs">
+        <javadoc destdir="${build.docs.api.dir}"
+                 classpath="${classpath}"
+                 author="true"
+                 version="true"
+                 use="true"
+                 windowtitle="${docs.window.title}"
+                 doctitle="${docs.title}"
+                 bottom="${docs.copyright}">
+            <fileset dir="${src.dir}"/>
+            <tag name="todo" scope="all" description="To do:" />
+        </javadoc>
+    </target>
+
+    <!-- Creates and initialises test directories -->
+    <target name="test-init" depends="compile" description="Prepares the test directory">
+      <mkdir  dir="${test.build.dir}" />
+      <delete dir="${test.build.data.dir}" />
+      <delete dir="${test.build.reports.dir}" />
+      <mkdir  dir="${test.build.data.dir}" />
+      <mkdir  dir="${test.build.reports.dir}" />
+      <copy todir="${test.build.data.dir}">
+          <fileset dir="${web.dir}"/>
+          <fileset dir="${test.data.dir}"/>
+      </copy>
+    </target>
+
+    <!-- Runs JUnit tests -->
+    <target name="test" depends="test-init"
+                        description="Runs JUnit tests">
+      <junit printsummary="false"
+             fork="yes"
+             dir="${test.junit.data.dir}"
+             errorProperty="test.failed"
+             failureProperty="test.failed">
+        <classpath path="${test.classpath}"/>
+        <formatter type="brief" usefile="false" />
+        <formatter type="xml" />
+        <test name="${test.name}" todir="${test.build.reports.dir}"/>
+      </junit>
+      <junitreport todir="${test.build.reports.dir}">
+        <fileset dir="${test.build.reports.dir}"/>
+        <report format="frames" todir="${test.build.reports.dir}" />
+      </junitreport>
+      <fail message="Tests failed. Check reports in ${test.build.reports.dir}" if="test.failed" />
+    </target>
+
+    <!-- Dumps DAS XML to standard out -->
+    <target name="test-dump" depends="compile, test-init"
+                                description="Dumps DAS XML to standard out">
+      <java classname="org.biojava.servlets.dazzle.DazzleServletDump"
+            classpath="${test.classpath}"
+            dir="${test.junit.data.dir}"
+            fork="true"/>
+    </target>
+
+    <target name="clean" description="Remove build and distribution directories">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+        <delete dir="${pub.dir}"/>
+    </target>
+
+    <!-- Cleans, tests then builds JAR and JavaDocs -->
+    <target name="all" depends="clean, test, publish, javadocs"
+                       description="Cleans, tests then builds JARs and JavaDocs">
+        <echo message="Built ${dist.war} and ${build.docs.api.dir}" />
+    </target>
+
+</project>

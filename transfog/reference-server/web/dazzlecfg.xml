@@ -1,0 +1,40 @@
+<!--
+    Sample Dazzle configuration for testing.
+-->
+
+<dazzle xmlns="http://www.biojava.org/2000/dazzle">
+
+    <resource id="sequence-resource" jclass="org.biojava.servlets.dazzle.holder.SequenceResourceHolderImpl">
+        <string name="url"                  value="http://www.ebi.ac.uk/transfog-srv/das/sequences/" />
+        <int    name="refreshInterval"      value="600" />
+    </resource>
+
+    <resource id="ontology-resource" jclass="uk.ac.ebi.dogwood.holder.OntologyMapHolderImpl">
+        <string name="propertiesFile"       value="/ontologies.properties" />
+    </resource>
+
+    <datasource id="candidates" jclass="uk.ac.ebi.transfog.das.datasource.TransfogReferenceSource">
+        <string name="name"                 value="TRANSFOG Candidates" />
+        <string name="description"          value="TRANSFOG prioritised candidate list" />
+        <string name="version"              value="1.0" />
+        <string name="url"                  value="/transfog-reference.gff" />
+        <int    name="refreshInterval"      value="10" />
+        <int    name="maxCachedFeatures"    value="1000" />
+        <int    name="minLocation"          value="0" />
+        <string name="sequenceHolderID"     value="sequence-resource" />
+        <string name="ontologyMapHolderID"  value="ontology-resource" />
+    </datasource>
+
+    <datasource id="sequences" jclass="uk.ac.ebi.transfog.das.datasource.TransfogSequenceSource">
+        <string name="name"                 value="TRANSFOG Sequences" />
+        <string name="description"          value="TRANSFOG gene and protein sequences" />
+        <string name="version"              value="1.0" />
+        <int    name="refreshInterval"      value="3600" />
+        <int    name="maxCachedFeatures"    value="1000" />
+        <string name="genePrefixes"         value="ENSG" />
+        <string name="proteinPrefixes"      value="IPI" />
+        <string name="geneUrl"              value="http://www.ebi.ac.uk/transfog-srv/ensembl-srv/das/human_genes/" />
+        <string name="proteinUrl"           value="http://www.ebi.ac.uk/das-srv/uniprot/das/aristotle/" />
+    </datasource>
+
+</dazzle>

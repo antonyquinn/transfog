@@ -1,0 +1,60 @@
+TRANSFOG ANNOTATION SERVER CHANGELOG
+====================================
+http://sourceforge.net/projects/transfog
+
+Changes 2007-06-27
+------------------
+
+web/transfog.xls
+* Allow import as well as export of GFF files
+* Allow user to choose export destination
+* Integrated Ontology Lookup Service to facilitate selection of ontology terms
+
+ src/vba
+ * Added new files (*.bas, *.frm, *.cls)
+
+Changes 2006-07-28
+------------------
+
+web/transfog.xls
+* Uses standard VB to save file, so should work on Mac
+* Added WP info to Help tab
+* Added ORF as feature type on Data Validation tab
+* Extended formatting to line 1050
+* Added digital VBA signature
+
+Changes in version 1.0.3 (2006-07-05)
+------------------------------------
+
+web
+* Renamed transfog-annotation.gff and transfog-annotation.xls
+  to transfog.* be consistent with the spreadsheet sent to Enzo in
+  April. 
+
+Changes in version 1.0.2 (2006-05-16)
+------------------------------------
+
+Ant
+* Build classpaths dynamically
+* Added test-dump
+* Added Excel release
+* Removed WAR release
+
+lib
+* Moved test JARs to test/lib
+* Updated biojava.jar
+* Updated dazzle.jar
+  - ${segment-id} can now be used in autoLink URLs
+* Updated dogwood.jar
+  - Removed Ontology_id and Dbxref (just use ID instead)
+  - Attributes now not case-sensitive (eg. ID or Id or id)
+
+src
+* Added vba directory
+* Moved to web directory to src
+* Added src/web/transfog-annotation.xls
+* Updated transfog-annotation.gff to reflect new use of type column
+* Corrected display-name and description in web.xml
+* Updated mapMaster in dazzlecfg.xml
+
+$Id: CHANGES.txt,v 1.4 2007/06/27 15:48:53 aquinn Exp $

@@ -1,0 +1,175 @@
+DAG-Edit License Agreement
+Copyright (C) 2000-2001, Berkeley Drosophila Genome Project
+Author: John Richter (go-admin@bdgp.lbl.gov)
+
+  Important: As of DAG-Edit version 1.106, released on May 14, 2001, the
+  licensing terms of DAG-Edit have changed. As of version 1.106, DAG-Edit is
+  NO LONGER released under the terms of the Gnu Public License, but is
+  released per the terms of the Perl Artistic License. This change allows
+  greater use of DAG-Edit, including the integration/adaption of DAG-Edit for
+  use in non-OpenSource commercial products.
+
+DAG-Edit, previously named GO-Edit, is hearby released to the public
+under the terms of the Artistic License (the same license under which Perl
+is distributed), contained in this archive in the file ARTISTIC_LICENSE. 
+
+DAG-Edit makes use of the org.bdgp toolkit, which is free to distribute and
+modify. However, the org.bdgp toolkit makes use of some optional binary
+libraries that have their own modification licenses. If you are thinking of
+modifying these libraries, please download the org.bdgp toolkit (and the
+bundled license agreements) from http://www.fruitfly.org/annot/org.bdgp
+
+DAG-Edit integrates other components which are free to distribute, but may
+have slightly different license agreements. These components are
+integrated unmodified into the GO browser. Their respective licenses follow:
+
+* Jakarta-ORO, Regular Expression Evaluator (org.apache.oro.*)
+(note: Jakarta ORO is licensed per the terms of the Apache Software License)
+------------------
+> The Apache Software License, Version 1.1
+>
+> Copyright (c) 2000 The Apache Software Foundation.  All rights
+> reserved.
+>
+> Redistribution and use in source and binary forms, with or without
+> modification, are permitted provided that the following conditions
+> are met:
+>
+> 1. Redistributions of source code must retain the above copyright
+>    notice, this list of conditions and the following disclaimer.
+>
+> 2. Redistributions in binary form must reproduce the above copyright
+>    notice, this list of conditions and the following disclaimer in
+>    the documentation and/or other materials provided with the
+>    distribution.
+>
+> 3. The end-user documentation included with the redistribution,
+>    if any, must include the following acknowledgment:
+>       "This product includes software developed by the
+>        Apache Software Foundation (http://www.apache.org/)."
+>    Alternately, this acknowledgment may appear in the software itself,
+>    if and wherever such third-party acknowledgments normally appear.
+>
+> 4. The names "Apache" and "Apache Software Foundation", "Jakarta-Oro" 
+>    must not be used to endorse or promote products derived from this
+>    software without prior written permission. For written
+>    permission, please contact apache@apache.org.
+>
+> 5. Products derived from this software may not be called "Apache" 
+>    or "Jakarta-Oro", nor may "Apache" or "Jakarta-Oro" appear in their 
+>    name, without prior written permission of the Apache Software Foundation.
+>
+> THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
+> WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+> OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+> DISCLAIMED.  IN NO EVENT SHALL THE APACHE SOFTWARE FOUNDATION OR
+> ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+> SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+> LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+> USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+> ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+> OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+> OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+> SUCH DAMAGE.
+> ====================================================================
+>
+> This software consists of voluntary contributions made by many
+> individuals on behalf of the Apache Software Foundation.  For more
+> information on the Apache Software Foundation, please see
+> <http://www.apache.org/>.
+>
+> Portions of this software are based upon software originally written 
+> by Daniel F. Savarese. We appreciate his contributions.
+
+The HP Jena Toolkit for parsing RDF (com.hp.hpl.mesa.rdf.jena.*)
+> /*
+>  *  (c) Copyright Hewlett-Packard Company 2001
+>  *  All rights reserved.
+>  *
+>  * Redistribution and use in source and binary forms, with or without
+>  * modification, are permitted provided that the following conditions
+>  * are met:
+>  * 1. Redistributions of source code must retain the above copyright
+>  *    notice, this list of conditions and the following disclaimer.
+>  * 2. Redistributions in binary form must reproduce the above copyright
+>  *    notice, this list of conditions and the following disclaimer in the
+>  *    documentation and/or other materials provided with the distribution.
+>  * 3. The name of the author may not be used to endorse or promote products
+>  *    derived from this software without specific prior written permission.
+>  *
+>  * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+>  * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+>  * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+>  * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+>  * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+>  * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+>  * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+>  * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+>  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+>  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+>  */
+
+The Apache Xerces xml parsing toolkit (used by Jena)
+
+> /*
+>  * The Apache Software License, Version 1.1
+>  *
+>  *
+>  * Copyright (c) 1999 The Apache Software Foundation.  All rights 
+>  * reserved.
+>  *
+>  * Redistribution and use in source and binary forms, with or without
+>  * modification, are permitted provided that the following conditions
+>  * are met:
+>  *
+>  * 1. Redistributions of source code must retain the above copyright
+>  *    notice, this list of conditions and the following disclaimer. 
+>  *
+>  * 2. Redistributions in binary form must reproduce the above copyright
+>  *    notice, this list of conditions and the following disclaimer in
+>  *    the documentation and/or other materials provided with the
+>  *    distribution.
+>  *
+>  * 3. The end-user documentation included with the redistribution,
+>  *    if any, must include the following acknowledgment:  
+>  *       "This product includes software developed by the
+>  *        Apache Software Foundation (http://www.apache.org/)."
+>  *    Alternately, this acknowledgment may appear in the software itself,
+>  *    if and wherever such third-party acknowledgments normally appear.
+>  *
+>  * 4. The names "Xerces" and "Apache Software Foundation" must
+>  *    not be used to endorse or promote products derived from this
+>  *    software without prior written permission. For written 
+>  *    permission, please contact apache@apache.org.
+>  *
+>  * 5. Products derived from this software may not be called "Apache",
+>  *    nor may "Apache" appear in their name, without prior written
+>  *    permission of the Apache Software Foundation.
+>  *
+>  * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
+>  * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+>  * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+>  * DISCLAIMED.  IN NO EVENT SHALL THE APACHE SOFTWARE FOUNDATION OR
+>  * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+>  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+>  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+>  * USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+>  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+>  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+>  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+>  * SUCH DAMAGE.
+>  * ====================================================================
+>  *
+>  * This software consists of voluntary contributions made by many
+>  * individuals on behalf of the Apache Software Foundation and was
+>  * originally based on software copyright (c) 1999, International
+>  * Business Machines, Inc., http://www.ibm.com.  For more
+>  * information on the Apache Software Foundation, please see
+>  * <http://www.apache.org/>.
+>  */
+
+This archive should contain the file ARTISTIC_LICENSE containing the terms of
+the Artistic License. If that file is missing, please see
+
+http://www.perl.com/pub/language/misc/Artistic.html
+

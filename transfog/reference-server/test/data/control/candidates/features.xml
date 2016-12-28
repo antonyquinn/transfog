@@ -1,0 +1,125 @@
+<?xml version='1.0' standalone='no' ?>
+<!DOCTYPE DASGFF SYSTEM 'dasgff.dtd' >
+<DASGFF>
+  <GFF version="1.0" href="http://localhost:0/candidates/features?segment=ENSG00000012048&#38;segment=ENSG00000074319&#38;segment=ENSG00000087088&#38;segment=ENSG00000127947&#38;segment=ENSG00000180616&#38;segment=IPI00010348&#38;segment=IPI00010349&#38;segment=IPI00010368&#38;segment=IPI00220877&#38;segment=IPI00297590">
+    <SEGMENT id="IPI00010348" version="default" start="1" stop="360">
+      <FEATURE id="TR:001" label="rank">
+        <TYPE id="screening">screening</TYPE>
+        <METHOD id="TR:000">TRANSFOG</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>1.0</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Overexpression associated with lung cancer</NOTE>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="ENSG00000180616" version="default" start="1" stop="6901">
+      <FEATURE id="TR:001" label="rank">
+        <TYPE id="screening">screening</TYPE>
+        <METHOD id="TR:000">TRANSFOG</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>10.0</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Candidate 10</NOTE>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="IPI00297590" version="default" start="1" stop="431">
+      <FEATURE id="TR:001" label="rank">
+        <TYPE id="screening">screening</TYPE>
+        <METHOD id="TR:000">TRANSFOG</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>5.0</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Candidate 5</NOTE>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="IPI00010349" version="default" start="1" stop="658">
+      <FEATURE id="TR:001" label="rank">
+        <TYPE id="screening">screening</TYPE>
+        <METHOD id="TR:000">TRANSFOG</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>2.0</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Candidate 2</NOTE>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="IPI00010368" version="default" start="1" stop="679">
+      <FEATURE id="TR:001" label="rank">
+        <TYPE id="screening">screening</TYPE>
+        <METHOD id="TR:000">TRANSFOG</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>4.0</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Candidate 4</NOTE>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="ENSG00000087088" version="default" start="1" stop="6711">
+      <FEATURE id="TR:001" label="rank">
+        <TYPE id="screening">screening</TYPE>
+        <METHOD id="TR:000">TRANSFOG</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>8.0</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Candidate 8</NOTE>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="IPI00220877" version="default" start="1" stop="229">
+      <FEATURE id="TR:001" label="rank">
+        <TYPE id="screening">screening</TYPE>
+        <METHOD id="TR:000">TRANSFOG</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>3.0</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Candidate 4</NOTE>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="ENSG00000127947" version="default" start="1" stop="102974">
+      <FEATURE id="TR:001" label="rank">
+        <TYPE id="screening">screening</TYPE>
+        <METHOD id="TR:000">TRANSFOG</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>9.0</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Candidate 9</NOTE>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="ENSG00000012048" version="default" start="1" stop="81091">
+      <FEATURE id="TR:001" label="rank">
+        <TYPE id="screening">screening</TYPE>
+        <METHOD id="TR:000">TRANSFOG</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>6.0</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Underexpression associated with breast cancer</NOTE>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="ENSG00000074319" version="default" start="1" stop="46630">
+      <FEATURE id="TR:001" label="rank">
+        <TYPE id="screening">screening</TYPE>
+        <METHOD id="TR:000">TRANSFOG</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>7.0</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+      </FEATURE>
+    </SEGMENT>
+  </GFF>
+</DASGFF>

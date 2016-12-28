@@ -1,0 +1,14 @@
+##gff-version 2
+##date Fri Apr 29 13:45:25 2005
+# IntelliJ doesn't get the tabs right for some reason - use text editor to be safe
+# <seqname> 	<source> 	<feature> <start> <end> <score> <strand> <frame> [attributes] [comments]
+IPI00010348	TR:000	screening	0	0	1	.	.	Ontology_id "TR:001" ; Note "Overexpression associated with lung cancer"
+IPI00010349	TR:000	screening	0	0	2	.	.	Ontology_id "TR:001" ; Note "Candidate 2"
+IPI00220877	TR:000	screening	0	0	3	.	.	Ontology_id "TR:001" ; Note "Candidate 4"
+IPI00010368	TR:000	screening	0	0	4	.	.	Ontology_id "TR:001" ; Note "Candidate 4"
+IPI00297590	TR:000	screening	0	0	5	.	.	Ontology_id "TR:001" ; Note "Candidate 5"
+ENSG00000012048	TR:000	screening	0	0	6	.	.	Ontology_id "TR:001" ; Note "Underexpression associated with breast cancer"
+ENSG00000074319	TR:000	screening	0	0	7	.	.	Ontology_id "TR:001" ; Candidate 7"
+ENSG00000087088	TR:000	screening	0	0	8	.	.	Ontology_id "TR:001" ; Note "Candidate 8"
+ENSG00000127947	TR:000	screening	0	0	9	.	.	Ontology_id "TR:001" ; Note "Candidate 9"
+ENSG00000180616	TR:000	screening	0	0	10	.	.	Ontology_id "TR:001" ; Note "Candidate 10"

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Get latest IPI files and convert to GFF
+# TODO: replace with ant
+
+url=ftp://ftp.ebi.ac.uk/pub/databases/IPI/current
+xrefs=ipi.HUMAN.xrefs
+zipped=$xrefs.gz
+gff=transfog-reference.gff
+
+wget $url/$zipped
+gunzip -f $zipped
+
+./ipi2gff.pl $xrefs 1 501 > $gff
+cat $gff
+
+rm $xrefs

@@ -1,0 +1,49 @@
+format-version: 1.0
+date: 16:03:2005 18:23
+saved-by: aquinn
+auto-generated-by: DAG-Edit 1.418
+default-namespace: default_namespace
+
+[Term]
+id: TR:000
+name: TRANSFOG
+
+[Term]
+id: TR:001
+name: rank
+is_a: TR:000
+
+[Term]
+id: TR:002
+name: resource
+is_a: TR:000
+
+[Term]
+id: TR:003
+name: FL-cDNA clone
+is_a: TR:002
+
+[Term]
+id: TR:004
+name: siRNA vector
+is_a: TR:002
+
+[Term]
+id: TR:005
+name: description
+is_a: TR:000
+
+[Term]
+id: TR:006
+name: dbxref
+is_a: TR:000
+
+[Term]
+id: TR:007
+name: gene
+is_a: TR:000
+
+[Term]
+id: TR:008
+name: protein
+is_a: TR:000

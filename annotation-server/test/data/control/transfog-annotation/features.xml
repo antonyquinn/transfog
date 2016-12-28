@@ -1,0 +1,107 @@
+<?xml version='1.0' standalone='no' ?>
+<!DOCTYPE DASGFF SYSTEM 'dasgff.dtd' >
+<DASGFF>
+  <GFF version="1.0" href="http://localhost/transfog-annotation/features?segment=IPI00028955;segment=ENSG00000139793">
+    <SEGMENT id="ENSG00000139793" version="default" start="1" stop="171767">
+      <FEATURE id="__dazzle__GO:0005524_ENSG00000139793_0_0" label="__dazzle__GO:0005524_ENSG00000139793_0_0">
+        <TYPE id="GO:0005524">ATP binding</TYPE>
+        <METHOD id="ECO:0000016">inferred from loss-of-function mutant phenotype</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <LINK href="http://www.autolink.com/res?id=ENSG00000139793">http://www.autolink.com/res?id=ENSG00000139793</LINK>
+      </FEATURE>
+      <FEATURE id="AG8337" label="AG8337">
+        <TYPE id="GO:0005524">ATP binding</TYPE>
+        <METHOD id="ECO:0000016">inferred from loss-of-function mutant phenotype</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <LINK href="http://www.autolink.com/res?id=AG8337">http://www.autolink.com/res?id=AG8337</LINK>
+      </FEATURE>
+      <FEATURE id="AG8337" label="LIMS identifier">
+        <TYPE id="GO:0005524">ATP binding</TYPE>
+        <METHOD id="ECO:0000016">inferred from loss-of-function mutant phenotype</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <LINK href="http://www.autolink.com/res?id=AG8337">http://www.autolink.com/res?id=AG8337</LINK>
+      </FEATURE>
+      <FEATURE id="AG8337" label="LIMS identifier">
+        <TYPE id="GO:0005524">ATP binding</TYPE>
+        <METHOD id="ECO:0000016">inferred from loss-of-function mutant phenotype</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Further information</NOTE>
+        <LINK href="http://www.autolink.com/res?id=AG8337">http://www.autolink.com/res?id=AG8337</LINK>
+      </FEATURE>
+      <FEATURE id="AG8337" label="LIMS identifier">
+        <TYPE id="GO:0005524">ATP binding</TYPE>
+        <METHOD id="ECO:0000016">inferred from loss-of-function mutant phenotype</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Further information</NOTE>
+        <TARGET id="IPI00029267" start="0" stop="0" />
+        <LINK href="http://www.autolink.com/res?id=AG8337">http://www.autolink.com/res?id=AG8337</LINK>
+      </FEATURE>
+      <FEATURE id="AG8337" label="LIMS identifier">
+        <TYPE id="GO:0005524">ATP binding</TYPE>
+        <METHOD id="ECO:0000016">inferred from loss-of-function mutant phenotype</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Further information</NOTE>
+        <TARGET id="IPI00029267" start="0" stop="0" />
+        <LINK href="http://www.institute.org/myprotein.xls">http://www.institute.org/myprotein.xls</LINK>
+      </FEATURE>
+      <FEATURE id="AG8337" label="LIMS identifier">
+        <TYPE id="GO:0005524">ATP binding</TYPE>
+        <METHOD id="ECO:0000016">inferred from loss-of-function mutant phenotype</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <NOTE>Further information</NOTE>
+        <TARGET id="IPI00029267" start="0" stop="0" />
+        <LINK href="http://www.institute.org/myprotein.xls" type="application/msexcel">Excel spreadsheet of my protein</LINK>
+      </FEATURE>
+    </SEGMENT>
+    <SEGMENT id="IPI00028955" version="default" start="1" stop="746">
+      <FEATURE id="GO:0006915" label="apoptosis">
+        <TYPE id="GO:0008150">biological_process</TYPE>
+        <METHOD id="ECO:0000097">inferred from cDNA microarray</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <LINK href="http://www.autolink.com/res?id=GO:0006915">http://www.autolink.com/res?id=GO:0006915</LINK>
+      </FEATURE>
+      <FEATURE id="39" label="39">
+        <TYPE id="GO:0005515">protein binding</TYPE>
+        <METHOD id="MI:0018">two hybrid</METHOD>
+        <START>0</START>
+        <END>0</END>
+        <SCORE>-</SCORE>
+        <ORIENTATION>0</ORIENTATION>
+        <PHASE>-</PHASE>
+        <LINK href="http://www.autolink.com/res?id=IPI00028955">http://www.autolink.com/res?id=IPI00028955</LINK>
+      </FEATURE>
+    </SEGMENT>
+  </GFF>
+</DASGFF>

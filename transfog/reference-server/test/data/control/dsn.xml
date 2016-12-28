@@ -1,0 +1,14 @@
+<?xml version='1.0' standalone='no' ?>
+<!DOCTYPE DASDSN SYSTEM 'dasdsn.dtd' >
+<DASDSN>
+  <DSN>
+    <SOURCE id="candidates" version="1.0">TRANSFOG Candidates</SOURCE>
+    <MAPMASTER>http://localhost/candidates/</MAPMASTER>
+    <DESCRIPTION>TRANSFOG prioritised candidate list</DESCRIPTION>
+  </DSN>
+  <DSN>
+    <SOURCE id="sequences" version="1.0">TRANSFOG Sequences</SOURCE>
+    <MAPMASTER>http://localhost/sequences/</MAPMASTER>
+    <DESCRIPTION>TRANSFOG gene and protein sequences</DESCRIPTION>
+  </DSN>
+</DASDSN>

@@ -1,0 +1,5 @@
+<?xml version='1.0' standalone='no' ?>
+<!DOCTYPE DASEP SYSTEM 'dasep.dtd' >
+<DASEP>
+  <ENTRY_POINTS href="http://localhost/sequences/entry_points" version="1.0" />
+</DASEP>

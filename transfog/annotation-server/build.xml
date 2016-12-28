@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+
+<!--
+  Copyright 2005 European Bioinformatics Institute.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<project name="TRANSFOG Annotation Server" default="dist" basedir=".">
+
+    <property file="build.properties"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="test.classpath">
+        <path refid="classpath"/>
+        <fileset dir="${test.lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <!-- Cleans, tests then releases -->
+    <target name="all"
+            depends="clean, test, release"
+            description="Cleans, tests then publishes">
+        <echo message="Built ${dist.war}, ${release.src} and ${release.webapp}" />
+    </target>
+
+    <target name="init"
+            description="Make build and distribution directories">
+        <tstamp />
+        <mkdir dir="${build.dir}" />
+        <mkdir dir="${build.webapp.dir}" />
+        <mkdir dir="${dist.dir}" />
+        <mkdir dir="${release.dir}" />
+    </target>
+
+    <target name="clean"
+            description="Remove build and distribution directories">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+        <delete dir="${release.dir}"/>
+    </target>
+
+    <target name="dist"
+            depends="init"
+            description="Generate distribution">
+        <war destfile="${dist.war}"
+             webxml="${web.dir}/WEB-INF/web.xml">
+            <lib dir="${lib.dir}"/>
+            <fileset dir="${web.dir}">
+                <exclude name="WEB-INF/web.xml"/>
+            </fileset>
+        </war>
+        <unwar src="${dist.war}" dest="${build.webapp.dir}"/>
+    </target>
+
+    <target name="release"
+            depends="dist"
+            description="Creates source and binary releases">
+        <!-- WAR -->
+        <tar destfile="${release.war}"
+             compression="gzip">
+            <tarfileset dir="."
+                        prefix="${release.prefix.war}">
+                <include name="LICENSE.txt" />
+                <include name="README.txt" />
+                <include name="INSTALL.txt" />
+                <include name="CHANGES.txt" />
+            </tarfileset>
+            <tarfileset dir="${dist.dir}"
+                        prefix="${release.prefix.war}"/>
+        </tar>
+        <!-- Webapp (unpacked WAR) -->
+        <tar destfile="${release.webapp}"
+             compression="gzip">
+            <tarfileset dir="."
+                        prefix="${release.prefix.webapp}">
+                <include name="LICENSE.txt" />
+                <include name="README.txt" />
+                <include name="INSTALL.txt" />
+                <include name="CHANGES.txt" />
+            </tarfileset>
+            <tarfileset dir="${build.webapp.dir}"
+                        prefix="${release.prefix.webapp}/${name}"
+                        preserveLeadingSlashes="true"/>
+        </tar>
+        <!-- Sources -->
+        <tar destfile="${release.src}" compression="gzip">
+            <tarfileset dir="."
+                        prefix="${release.prefix.src}"
+                        preserveLeadingSlashes="true">
+                <include name="*.*" />
+            </tarfileset>
+            <tarfileset dir="${ide.dir}"
+                        prefix="${release.prefix.src}/${ide.dir}"
+                        preserveLeadingSlashes="true"/>
+            <tarfileset dir="${lib.dir}"
+                        prefix="${release.prefix.src}/${lib.dir}"
+                        preserveLeadingSlashes="true"/>
+            <tarfileset dir="${test.dir}"
+                        prefix="${release.prefix.src}/${test.dir}"
+                        preserveLeadingSlashes="true"/>
+            <tarfileset dir="${web.dir}"
+                        prefix="${release.prefix.src}/${web.dir}"
+                        preserveLeadingSlashes="true"/>
+        </tar>
+    </target>
+
+    <target name="tag"
+            description="Tag CVS release">
+        <cvs command="tag ${cvs.tag}"/>
+        <echo message="CVS tagged with ${cvs.tag}" />
+    </target>
+
+    <target name="publish"
+            depends="release"
+            description="Uploads the release files to SourceForge">
+        <ftp server="${publish.ftp.server}"
+             remotedir="${publish.ftp.remotedir}"
+             userid="${publish.ftp.userid}"
+             password="${publish.ftp.password}"
+             action="${publish.ftp.action}">
+            <fileset dir="${release.dir}"/>
+        </ftp>
+    </target>
+
+    <!-- Creates and initialises test directories -->
+    <target name="test-init"
+            depends="init"
+            description="Prepares the test directory">
+      <!-- Delete old data -->
+      <delete dir="${test.build.dir}"
+              failonerror="false"/>
+      <!-- Create directories -->
+      <mkdir  dir="${test.build.dir}" />
+      <mkdir  dir="${test.build.data.dir}" />
+      <mkdir  dir="${test.build.reports.dir}" />
+      <copy todir="${test.build.data.dir}">
+          <fileset dir="${web.dir}"/>
+          <fileset dir="${test.data.dir}"/>
+      </copy>
+    </target>
+
+    <!-- Runs JUnit tests -->
+    <target name="test"
+            depends="test-init"
+            description="Runs JUnit tests">
+      <junit printsummary="false"
+             fork="yes"
+             dir="${test.junit.data.dir}"
+             errorProperty="test.failed"
+             failureProperty="test.failed">
+        <classpath refid="test.classpath"/>
+        <formatter type="brief" usefile="false" />
+        <formatter type="xml" />
+        <test name="${test.name}"
+              todir="${test.build.reports.dir}"
+              if="test.name" />
+      </junit>
+      <junitreport todir="${test.build.reports.dir}">
+        <fileset dir="${test.build.reports.dir}"/>
+        <report format="frames" todir="${test.build.reports.dir}" />
+      </junitreport>
+      <fail message="Tests failed. Check reports in ${test.build.reports.dir}"
+            if="test.failed" />
+    </target>
+
+    <!-- Dumps JUnit test responses to standard out -->
+    <target name="test-dump"
+            depends="test-init"
+            description="Dumps JUnit test responses to standard out">
+        <java classname="${test.dump.name}"
+              dir="${test.junit.data.dir}"
+              failonerror="true"
+              fork="true">
+            <classpath refid="test.classpath"/>
+        </java>
+    </target>
+
+</project>

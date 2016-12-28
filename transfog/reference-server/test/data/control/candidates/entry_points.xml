@@ -1,0 +1,16 @@
+<?xml version='1.0' standalone='no' ?>
+<!DOCTYPE DASEP SYSTEM 'dasep.dtd' >
+<DASEP>
+  <ENTRY_POINTS href="http://localhost:0/candidates/entry_points?" version="1.0">
+    <SEGMENT id="ENSG00000012048" size="81091" subparts="no" />
+    <SEGMENT id="IPI00297590" size="431" subparts="no" />
+    <SEGMENT id="IPI00010368" size="679" subparts="no" />
+    <SEGMENT id="ENSG00000127947" size="102974" subparts="no" />
+    <SEGMENT id="ENSG00000087088" size="6711" subparts="no" />
+    <SEGMENT id="IPI00010348" size="360" subparts="no" />
+    <SEGMENT id="IPI00220877" size="229" subparts="no" />
+    <SEGMENT id="ENSG00000180616" size="6901" subparts="no" />
+    <SEGMENT id="IPI00010349" size="658" subparts="no" />
+    <SEGMENT id="ENSG00000074319" size="46630" subparts="no" />
+  </ENTRY_POINTS>
+</DASEP>

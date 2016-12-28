@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+
+    <display-name>TRANSFOG Annotation Server</display-name>
+    <description>
+        TRANSFOG DAS annotation server.
+        See http://sourceforge.net/projects/transfog
+    </description>
+
+    <servlet>
+      <servlet-name>DazzleServerMain</servlet-name>
+      <servlet-class>org.biojava.servlets.dazzle.DazzleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+      <servlet-name>DazzleServerMain</servlet-name>
+      <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
